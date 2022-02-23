@@ -1,4 +1,4 @@
-package com.group9.gametime.api;
+package com.group9.gametime.api.helpers;
 
 import java.io.BufferedReader;
 import java.io.IOException;

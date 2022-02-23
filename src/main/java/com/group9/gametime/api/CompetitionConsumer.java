@@ -1,5 +1,7 @@
 package com.group9.gametime.api;
 
+import com.group9.gametime.api.helpers.HttpRequestHelper;
+
 import java.io.*;
 import java.net.URL;
 

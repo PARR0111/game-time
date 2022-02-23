@@ -5,14 +5,12 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.time.LocalDate;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ScheduleConsumerTest {
     private ScheduleConsumer scheduleConsumer;
 
     @Test
-    void getScheduleForADate() throws IOException {
+    void getScheduleByDate() throws IOException {
         scheduleConsumer = new ScheduleConsumer();
-        scheduleConsumer.getScheduleForADate(LocalDate.now());
+        System.out.println(scheduleConsumer.getScheduleByDate(LocalDate.now()));
     }
 }
