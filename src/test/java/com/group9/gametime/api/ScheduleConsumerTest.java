@@ -11,6 +11,6 @@ class ScheduleConsumerTest {
     @Test
     void getScheduleByDate() throws IOException {
         scheduleConsumer = new ScheduleConsumer();
-        System.out.println(scheduleConsumer.getScheduleByDate(LocalDate.now()));
+        System.out.println(scheduleConsumer.getScheduleByDate(LocalDate.of(2022, 3, 8)));
     }
 }

@@ -2,7 +2,7 @@ package com.group9.gametime.beans;
 
 public class Schedule {
     private boolean success;
-    private Object data;
+    private Data data;
 
     public boolean isSuccess() {
         return success;
@@ -12,11 +12,11 @@ public class Schedule {
         this.success = success;
     }
 
-    public Object getData() {
+    public Data getData() {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(Data data) {
         this.data = data;
     }
 
