@@ -2,6 +2,8 @@ package com.group9.gametime.api.helpers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.json.JsonMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 public class JsonParser<T> {
     private Class<T> type;
@@ -11,7 +13,9 @@ public class JsonParser<T> {
     }
 
     public T parse(String jsonPayload) throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectMapper objectMapper = JsonMapper.builder()
+                .addModule(new JavaTimeModule())
+                .build();
         return objectMapper.readValue(jsonPayload, type);
     }
 }
