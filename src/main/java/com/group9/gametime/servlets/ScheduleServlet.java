@@ -30,8 +30,8 @@ public class ScheduleServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Hardcoding March 8th, 2022 (date when there are games scheduled). Otherwise, nothing to display.
-        LocalDate date = LocalDate.of(2022, 3, 8);
+        // Hardcoding March 15th, 2022 (date when there are games scheduled). Otherwise, nothing to display.
+        LocalDate date = LocalDate.of(2022, 3, 15);
 
         Schedule schedule = scheduleConsumer.getScheduleByDate(date);
         games = schedule.getData().getGames();
@@ -51,7 +51,7 @@ public class ScheduleServlet extends HttpServlet {
                     "</tr>";
 
             page += "<tr>" +
-                    "<th colspan='5'>" + games.get(1).getRound() + "</th>"+
+                    "<th colspan='5'>" + games.get(0).getRound() + "</th>"+
                     "</tr>";
 
             page += "<tr>" +

@@ -18,7 +18,7 @@ public class ScheduleConsumer {
         URL url = new URL( BASE_URL.getValue() +
                 "fixtures/matches.json?competition_id="
                 + COMPETITION_ID
-                +"&key=X8KGigCRSwWGGnxE&secret=QU14J5EpycOyIebGmWmFcZw4vsLcQjQG&date="
+                +"&key=13b7RV3ottrR0Jzj&secret=6lZ5eyV7b65tC5sD9EK0AOp3iQUiAuBG&date="
                 + date.toString());
 
         String jsonPayload = HttpRequestHelper.sendGetRequest(url);
