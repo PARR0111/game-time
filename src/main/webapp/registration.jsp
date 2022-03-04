@@ -3,18 +3,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Registration</title>
+	<meta charset="ISO-8859-1">
+	<title>Registration</title>
+	
+	<link rel="stylesheet" href="styles.css">
+	
+		<style>
+		body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #b30000;
+    border: 4px solid black;
+  }
+  
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    float: left;
+    background-color: #b30000;
+    color: white;
+            
+  }
+
+  div.centre {
+    margin: auto;
+    width: 300px;
+    border: 3px solid #d9d9d9;
+    border-radius: 12px;
+    padding: 14px;
+  }
+
+  .title {
+      text-align: center;
+  }
+		
+</style>
+	
+	
 </head>
 <body>
-	<h1>New User Registration</h1>
+
+<div class="topnav">
+		<a class="active" href="${pageContext.request.contextPath}/"><b>GameTime</b></a>
+		<a class="active" href="#leagues">Leagues</a>
+		<a href="#contact">Contact</a>
+		<a href="login.jsp">Login</a>
+	</div>
+
+
+	<h1 class="title">New User Registration</h1>
+	
+	<div class="centre">
 	<form action="RegisterServlet" method="POST">
-	Username: <input type="text" name = "username"><br>
-	Password: <input type="password" name = "password"><br>
-	Re-enter password: <input type="password" name = "password_conf"><br>
-	Email: <input type="email" name = "email"><br>
+	<label>Username:</label><br><input type="text" name = "username"><br><br>
+	<label>Password:</label><br><input type="password" name = "password"><br><br>
+	<label>Re-enter password:</label><br><input type="password" name = "password_conf"><br><br>
+	<label>Email:</label><br><input type="email" name = "email"><br><br>
 	<input type="submit" value="Register">
 	</form>
-	
+	</div>
 </body>
 </html>
