@@ -41,10 +41,56 @@ public class ScheduleServlet extends HttpServlet {
     }
 
     private String generateGamesTable(List<Game> games, LocalDate date) {
-        String page = "";
+        String page = "<style>\r\n"
+        		+ "		body {\r\n"
+        		+ "    margin: 0;\r\n"
+        		+ "    font-family: Arial, Helvetica, sans-serif;\r\n"
+        		+ "  }\r\n"
+        		+ "  \r\n"
+        		+ "  .topnav {\r\n"
+        		+ "    overflow: hidden;\r\n"
+        		+ "    background-color: #b30000;\r\n"
+        		+ "    border: 4px solid black;\r\n"
+        		+ "  }\r\n"
+        		+ "  \r\n"
+        		+ "  .topnav a {\r\n"
+        		+ "    float: right;\r\n"
+        		+ "    color: #f2f2f2;\r\n"
+        		+ "    text-align: center;\r\n"
+        		+ "    padding: 14px 16px;\r\n"
+        		+ "    text-decoration: none;\r\n"
+        		+ "    font-size: 20px;\r\n"
+        		+ "  }\r\n"
+        		+ "  \r\n"
+        		+ "  .topnav a:hover {\r\n"
+        		+ "    background-color: #ddd;\r\n"
+        		+ "    color: black;\r\n"
+        		+ "  }\r\n"
+        		+ "  \r\n"
+        		+ "  .topnav a.active {\r\n"
+        		+ "    float: left;\r\n"
+        		+ "    background-color: #b30000;\r\n"
+        		+ "    color: white;\r\n"
+        		+ "            \r\n"
+        		+ "  }\r\n"
+        		+ "\r\n"
+        		+ "  div.centre {\r\n"
+        		+ "    margin: auto;\r\n"
+        		+ "    width: 500px;\r\n"
+        		+ "    border: 3px solid #d9d9d9;\r\n"
+        		+ "    border-radius: 12px;\r\n"
+        		+ "    padding: 14px;\r\n"
+        		+ "  }\r\n"
+        		+ "\r\n"
+        		+ "  .title {\r\n"
+        		+ "      text-align: center;\r\n"
+        		+ "  }\r\n"
+        		+ "		\r\n"
+        		+ "		</style>";
 
         if(!games.isEmpty()) {
-            page = "<table style='text-align:center'>\n\n";
+        	
+            page += "<table style='text-align:center'>\n\n";
 
             page += "<tr>" +
                     "<th colspan='5'>" + date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)) + "</th>"+
@@ -73,6 +119,7 @@ public class ScheduleServlet extends HttpServlet {
             }
 
             page += "\n</table>";
+            
         }
 
         return page;
