@@ -44,7 +44,7 @@ public class ScheduleServlet extends HttpServlet {
         String page = "";
 
         if(!games.isEmpty()) {
-            page = "<table style='text-align:center'>\n\n";
+            page = "<table style='text-align:center; margin-left:auto; margin-right:auto'>\n\n";
 
             page += "<tr>" +
                     "<th colspan='5'>" + date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)) + "</th>"+
