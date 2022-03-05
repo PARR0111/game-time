@@ -49,7 +49,7 @@ public class JDBC {
             String username1 = rs.getString("username");
             String password1 = rs.getString("password");
 
-            User user = new User(email, username1, password1);
+            User user = new User(email, password1, username1 );
             users.add(user);
         }
         rs.close();
@@ -68,7 +68,7 @@ public class JDBC {
             String username1 = rs.getString("username");
             String password1 = rs.getString("password");
 
-            user = new User(email, username1, password1);
+            user = new User(email, password1, username1 );
         }
         rs.close();
 
@@ -87,7 +87,7 @@ public class JDBC {
             String username = rs.getString("username");
             String password = rs.getString("password");
 
-            user = new User(email1, username, password);
+            user = new User(email1, password, username );
             user.setId(id);
         }
         rs.close();
