@@ -17,7 +17,7 @@ import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "ScheduleServlet", value = "/")
+@WebServlet(name = "ScheduleServlet", value = "/index")
 public class ScheduleServlet extends HttpServlet {
     private List<Game> games;
     private ScheduleConsumer scheduleConsumer;

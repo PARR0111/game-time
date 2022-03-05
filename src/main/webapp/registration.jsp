@@ -1,20 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+		 pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Registration</title>
+	<meta charset="ISO-8859-1">
+	<title>Registration</title>
+
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/main.css"/>
 </head>
 <body>
-	<h1>New User Registration</h1>
+
+<div class="topnav">
+	<a class="active" href="${pageContext.request.contextPath}/"><b>GameTime</b></a>
+	<a class="active" href="#leagues">Leagues</a>
+	<a href="#contact">Contact</a>
+	<a href="login.jsp">Login</a>
+</div>
+
+
+<h1 class="title">New User Registration</h1>
+
+<div class="centre">
 	<form action="RegisterServlet" method="POST">
-	Username: <input type="text" name = "username"><br>
-	Password: <input type="password" name = "password"><br>
-	Re-enter password: <input type="password" name = "password_conf"><br>
-	Email: <input type="email" name = "email"><br>
-	<input type="submit" value="Register">
+		<label>Username:</label><br><input type="text" name = "username"><br><br>
+		<label>Password:</label><br><input type="password" name = "password"><br><br>
+		<label>Re-enter password:</label><br><input type="password" name = "password_conf"><br><br>
+		<label>Email:</label><br><input type="email" name = "email"><br><br>
+		<input type="submit" value="Register">
 	</form>
-	
+</div>
 </body>
 </html>
