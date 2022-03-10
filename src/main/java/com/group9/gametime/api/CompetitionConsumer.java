@@ -13,7 +13,7 @@ public class CompetitionConsumer {
     public void getCompetitionsByFederation(String federationId) throws IOException {
         // Get URL
         URL url = new URL( BASE_URL.getValue() +
-                "competitions/list.json&key=13b7RV3ottrR0Jzj&secret=6lZ5eyV7b65tC5sD9EK0AOp3iQUiAuBG?"
+                "competitions/list.json&key=NUS2mBNqkmup6Fbr&secret=OaSpX6XRI64PJoXxjPAFrn5LKAbQfni3?"
                 + FEDERATION_KEY
                 + federationId);
 
