@@ -24,8 +24,8 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         try {
-            JDBC registerJDBC = new JDBC();
-            User user = registerJDBC.getUser(username, password);
+        	JDBC loginJDBC = JDBC.getInstance();
+            User user = loginJDBC.getUser(username, password);
             System.out.println("Logged in user: " + user.getUsername());
             if ( user != null ) {
                 System.out.println("Successful login");
