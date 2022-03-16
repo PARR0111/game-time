@@ -29,7 +29,7 @@ public class PasswordRecoveryServlet extends HttpServlet {
         JDBC recoveryJDBC;
 
         try {
-            recoveryJDBC = new JDBC();
+            recoveryJDBC = JDBC.getInstance();
             String email = request.getParameter("email");
             EmailMessage emailMessage = new EmailMessage();
             emailMessage.setTo(email);

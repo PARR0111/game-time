@@ -8,15 +8,23 @@ import java.util.List;
 
 public class JDBC {
     private Connection con;
-
-    public JDBC() throws Exception {
+    private static JDBC instance;
+    
+    private JDBC() throws Exception {
         this.con = createConnection();
     }
 
+	public static JDBC getInstance() throws Exception {
+		if ( instance == null ) {
+			instance = new JDBC();
+		}
+		return instance;
+	}
+    
     public Connection createConnection() throws Exception {
-        String url = "jdbc:mysql://localhost:3306/game-time";
+        String url = "jdbc:mysql://localhost:3306/gametime";
         String uname = "root";    // to be replaced according to DB configuration
-        String upass = "root";    // to be replaced according to DB configuration
+        String upass = "sadw$#@#$fL:_fSDFRGcssd";    // to be replaced according to DB configuration
 
         Class.forName("com.mysql.cj.jdbc.Driver");
 
