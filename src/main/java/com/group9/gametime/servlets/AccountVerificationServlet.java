@@ -39,7 +39,7 @@ public class AccountVerificationServlet extends HttpServlet {
         int id = (int) session.getAttribute("id");
 
         try {
-            JDBC verifyJDBC = new JDBC();
+            JDBC verifyJDBC = JDBC.getInstance();
             verifyJDBC.updateIsVerified(id);
             response.sendRedirect("success.jsp");
         } catch (Exception e) {

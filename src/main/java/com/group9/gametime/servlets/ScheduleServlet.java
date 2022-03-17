@@ -1,8 +1,13 @@
 package com.group9.gametime.servlets;
 
-import com.group9.gametime.api.ScheduleConsumer;
+import com.group9.gametime.repositories.api.LiveScoreCompetitionRepository;
+import com.group9.gametime.repositories.api.LiveScoreScheduleRepository;
 import com.group9.gametime.beans.Game;
 import com.group9.gametime.beans.Schedule;
+import com.group9.gametime.services.CompetitionService;
+import com.group9.gametime.services.api.LiveScoreCompetitionService;
+import com.group9.gametime.services.ScheduleService;
+import com.group9.gametime.services.api.LiveScoreScheduleService;
 import com.group9.gametime.servlets.helpers.HtmlStringBuilder;
 
 import javax.servlet.ServletException;
@@ -19,21 +24,23 @@ import java.util.List;
 
 @WebServlet(name = "ScheduleServlet", value = "/index")
 public class ScheduleServlet extends HttpServlet {
+    private final int ENGLISH_LEAGUE_COMPETITION_ID = 2;
+
     private List<Game> games;
-    private ScheduleConsumer scheduleConsumer;
+    private ScheduleService scheduleService;
 
     @Override
     public void init() throws ServletException {
         games = new ArrayList<>();
-        scheduleConsumer = new ScheduleConsumer();
+        scheduleService = new LiveScoreScheduleService(new LiveScoreScheduleRepository());
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Hardcoding March 15th, 2022 (date when there are games scheduled). Otherwise, nothing to display.
-        LocalDate date = LocalDate.of(2022, 3, 15);
+        // Hardcoding March 19th, 2022 (date when there are games scheduled). Otherwise, nothing to display.
+        LocalDate date = LocalDate.of(2022, 5, 15);
 
-        Schedule schedule = scheduleConsumer.getScheduleByDate(date);
+        Schedule schedule = scheduleService.getScheduleByDateAndCompetitionId(date, ENGLISH_LEAGUE_COMPETITION_ID);
         games = schedule.getData().getGames();
         String allGames = generateGamesTable(games, date);
         String page = HtmlStringBuilder.buildString(request.getServletContext().getRealPath("/index.html"), allGames);
@@ -51,7 +58,7 @@ public class ScheduleServlet extends HttpServlet {
                     "</tr>";
 
             page += "<tr>" +
-                    "<th colspan='5'>" + games.get(0).getRound() + "</th>"+
+                    "<th colspan='5'>Round: " + games.get(0).getRound() + "</th>"+
                     "</tr>";
 
             page += "<tr>" +

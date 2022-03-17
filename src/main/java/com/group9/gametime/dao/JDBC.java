@@ -22,9 +22,9 @@ public class JDBC {
 	}
     
     public Connection createConnection() throws Exception {
-        String url = "jdbc:mysql://localhost:3306/gametime";
+        String url = "jdbc:mysql://localhost:3306/game-time";
         String uname = "root";    // to be replaced according to DB configuration
-        String upass = "sadw$#@#$fL:_fSDFRGcssd";    // to be replaced according to DB configuration
+        String upass = "root";    // to be replaced according to DB configuration
 
         Class.forName("com.mysql.cj.jdbc.Driver");
 

@@ -1,4 +1,4 @@
-package com.group9.gametime.api.helpers;
+package com.group9.gametime.repositories.api.helpers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
