@@ -4,6 +4,7 @@ import com.group9.gametime.beans.EmailMessage;
 import com.group9.gametime.beans.User;
 import com.group9.gametime.dao.JDBC;
 import com.group9.gametime.servlets.helpers.EmailUtility;
+import com.group9.gametime.servlets.helpers.RandomPasswordGenerator;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,6 +29,9 @@ public class PasswordRecoveryServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         JDBC recoveryJDBC;
 
+        RandomPasswordGenerator randomPWGenerator = RandomPasswordGenerator.getInstance();
+        String randomPassword = randomPWGenerator.getRandomPassword();
+        
         try {
             recoveryJDBC = JDBC.getInstance();
             String email = request.getParameter("email");
@@ -36,7 +40,10 @@ public class PasswordRecoveryServlet extends HttpServlet {
             emailMessage.setSubject("Game-Time Password Recovery");
             User user = recoveryJDBC.getUserFromEmail(email);
 
-            emailMessage.setMessage("Hello " + user.getUsername() + "\n\n Your password is: " + user.getPassword());
+            //set user password to randomly generated password
+            user.setPassword(randomPassword);
+            
+            emailMessage.setMessage("Hello " + user.getUsername() + "\n\n Your new password is: " + user.getPassword());
 
             try {
                 EmailUtility.sendMail(emailMessage);
