@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
         try {
         	JDBC loginJDBC = JDBC.getInstance();
             User user = loginJDBC.getUser(username, password);
-            System.out.println("Logged in user: " + user.getUsername());
+
             if ( user != null ) {
                 System.out.println("Successful login");
                 HttpSession session = request.getSession();
