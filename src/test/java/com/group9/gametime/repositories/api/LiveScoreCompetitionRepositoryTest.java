@@ -10,6 +10,8 @@ class LiveScoreCompetitionRepositoryTest {
     @Test
     void getCompetitionsByFederation() throws IOException {
         competitionConsumer = new LiveScoreCompetitionRepository();
-        competitionConsumer.getCompetitionsByCountry(2);
+        competitionConsumer.getCompetitionsByCountry("19");
+
+        System.out.println();
     }
 }

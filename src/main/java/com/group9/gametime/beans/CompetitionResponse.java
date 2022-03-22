@@ -1,8 +1,8 @@
 package com.group9.gametime.beans;
 
-public class Schedule {
+public class CompetitionResponse {
     private boolean success;
-    private ScheduleData data;
+    private CompetitionData data;
 
     public boolean isSuccess() {
         return success;
@@ -12,17 +12,17 @@ public class Schedule {
         this.success = success;
     }
 
-    public ScheduleData getData() {
+    public CompetitionData getData() {
         return data;
     }
 
-    public void setData(ScheduleData data) {
+    public void setData(CompetitionData data) {
         this.data = data;
     }
 
     @Override
     public String toString() {
-        return "Schedule{" +
+        return "Competitions{" +
                 "success=" + success +
                 ", data=" + data +
                 '}';
