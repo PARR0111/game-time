@@ -14,7 +14,7 @@ public class LiveScoreCompetitionRepository implements CompetitionRepository {
     public int getCompetitionsByCountry(int countryId) throws IOException {
         // Get URL
         URL url = new URL( BASE_URL.getValue() +
-                "competitions/list.json&" + "&"+ KEY.getValue() + "&" + SECRET.getValue() + "?"
+                "competitions/list.json&" + KEY.getValue() + "&" + SECRET.getValue() + "?"
                 + COUNTRY_KEY
                 + countryId);
 
