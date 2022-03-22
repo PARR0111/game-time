@@ -1,10 +1,9 @@
 package com.group9.gametime.repositories.api;
 
 import com.group9.gametime.repositories.ScheduleRepository;
-import com.group9.gametime.repositories.api.enums.ApiSetting;
 import com.group9.gametime.repositories.api.helpers.HttpRequestHelper;
 import com.group9.gametime.repositories.api.helpers.JsonParser;
-import com.group9.gametime.beans.Schedule;
+import com.group9.gametime.beans.schedule.Schedule;
 
 import java.io.IOException;
 import java.net.URL;

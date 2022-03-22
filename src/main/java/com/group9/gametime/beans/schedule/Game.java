@@ -1,4 +1,4 @@
-package com.group9.gametime.beans;
+package com.group9.gametime.beans.schedule;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -1,8 +1,8 @@
-package com.group9.gametime.beans;
+package com.group9.gametime.beans.schedule;
 
 public class Schedule {
     private boolean success;
-    private Data data;
+    private ScheduleData data;
 
     public boolean isSuccess() {
         return success;
@@ -12,11 +12,11 @@ public class Schedule {
         this.success = success;
     }
 
-    public Data getData() {
+    public ScheduleData getData() {
         return data;
     }
 
-    public void setData(Data data) {
+    public void setData(ScheduleData data) {
         this.data = data;
     }
 

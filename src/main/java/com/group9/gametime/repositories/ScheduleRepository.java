@@ -1,6 +1,6 @@
 package com.group9.gametime.repositories;
 
-import com.group9.gametime.beans.Schedule;
+import com.group9.gametime.beans.schedule.Schedule;
 
 import java.io.IOException;
 import java.time.LocalDate;
