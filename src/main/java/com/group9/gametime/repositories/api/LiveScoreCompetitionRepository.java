@@ -1,7 +1,7 @@
 package com.group9.gametime.repositories.api;
 
-import com.group9.gametime.beans.CompetitionResponse;
-import com.group9.gametime.beans.Competition;
+import com.group9.gametime.beans.competition.CompetitionResponse;
+import com.group9.gametime.beans.competition.Competition;
 import com.group9.gametime.repositories.CompetitionRepository;
 import com.group9.gametime.repositories.api.helpers.HttpRequestHelper;
 import com.group9.gametime.repositories.api.helpers.JsonParser;

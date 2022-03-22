@@ -1,6 +1,6 @@
 package com.group9.gametime.services.api;
 
-import com.group9.gametime.beans.Schedule;
+import com.group9.gametime.beans.schedule.Schedule;
 import com.group9.gametime.repositories.ScheduleRepository;
 import com.group9.gametime.services.ScheduleService;
 

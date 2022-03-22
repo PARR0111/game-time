@@ -1,4 +1,4 @@
-package com.group9.gametime.beans;
+package com.group9.gametime.beans.competition;
 
 public class CompetitionResponse {
     private boolean success;

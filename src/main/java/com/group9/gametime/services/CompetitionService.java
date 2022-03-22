@@ -1,6 +1,6 @@
 package com.group9.gametime.services;
 
-import com.group9.gametime.beans.Competition;
+import com.group9.gametime.beans.competition.Competition;
 
 import java.io.IOException;
 import java.util.List;

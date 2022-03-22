@@ -1,6 +1,6 @@
 package com.group9.gametime.services.api;
 
-import com.group9.gametime.beans.Competition;
+import com.group9.gametime.beans.competition.Competition;
 import com.group9.gametime.repositories.CompetitionRepository;
 import com.group9.gametime.services.CompetitionService;
 

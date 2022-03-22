@@ -1,9 +1,8 @@
 package com.group9.gametime.servlets;
 
 import com.group9.gametime.repositories.api.LiveScoreScheduleRepository;
-import com.group9.gametime.beans.Game;
-import com.group9.gametime.beans.Schedule;
-import com.group9.gametime.repositories.api.enums.ApiSetting;
+import com.group9.gametime.beans.schedule.Game;
+import com.group9.gametime.beans.schedule.Schedule;
 import com.group9.gametime.services.ScheduleService;
 import com.group9.gametime.services.api.LiveScoreScheduleService;
 import com.group9.gametime.servlets.helpers.HtmlStringBuilder;
