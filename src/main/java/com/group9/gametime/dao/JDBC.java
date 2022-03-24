@@ -102,9 +102,37 @@ public class JDBC {
 
         return user;
     }
+    
+    public User getUserFromUsername(String username) throws SQLException {
+        String query = "SELECT * FROM user WHERE username =" + "\"" + username + "\"";
+        Statement st = con.createStatement();
+        ResultSet rs = st.executeQuery(query);
+        User user = null;
+
+        if (rs.next()) {
+            Long id = rs.getLong("userID");
+            String email1 = rs.getString("email");
+            String username1 = rs.getString("username");
+            String password = rs.getString("password");
+
+            user = new User(email1, password, username1);
+            user.setId(id);
+        }
+        rs.close();
+
+        return user;
+    }
 
     public void updateIsVerified(int id) throws SQLException {
         String query = "UPDATE user SET is_verified=1 WHERE userID=" + id;
+        Statement st = con.createStatement();
+
+        st.executeUpdate(query);
+        st.close();
+    }
+    
+    public void updatePassword(long id, String newPassword) throws SQLException {
+        String query = "UPDATE user SET password =" +"\"" + newPassword + "\"" + "WHERE userID=" + id;
         Statement st = con.createStatement();
 
         st.executeUpdate(query);
