@@ -14,8 +14,14 @@
 	<a class="active" href="${pageContext.request.contextPath}/"><b>GameTime</b></a>
 	<a class="active" href="#leagues">Leagues</a>
 	<a href="#contact">Contact</a>
-	<a href="login.jsp">Login</a>
+	
+	<% if (session.getAttribute("username")==null){ %>
+		<a href="login.jsp">Login</a>
+	<% } else { %>
+		<a href="LogoutServlet">Logout</a>
+	<% } %>
 </div>
+
 
 
 <%
