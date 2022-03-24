@@ -38,5 +38,8 @@
 <form action="PasswordResetServlet">
 	<input type="submit" value="Change password">
 </form>
+<form action="DeleteUserServlet" method="POST">
+	<input type="submit" value="Delete account" onclick="return confirm('Are you sure you want to delete your account?');">
+</form>
 </body>
 </html>
