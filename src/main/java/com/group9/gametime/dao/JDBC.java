@@ -138,4 +138,12 @@ public class JDBC {
         st.executeUpdate(query);
         st.close();
     }
+    
+    public void deleteUser(long id) throws SQLException {
+        String query = "DELETE from user WHERE userID=" + id;
+        Statement st = con.createStatement();
+
+        st.executeUpdate(query);
+        st.close();
+    }
 }
