@@ -33,7 +33,10 @@
 <h1>Welcome ${username}</h1>
 
 <form action="LogoutServlet">
-	<input type="submit" value="logout">
+	<input type="submit" value="Logout">
+</form>
+<form action="PasswordResetServlet">
+	<input type="submit" value="Change password">
 </form>
 </body>
 </html>
