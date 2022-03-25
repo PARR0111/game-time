@@ -36,17 +36,17 @@
   <div class="dropdown">
     <button class="dropbtn">Leagues</button>
     <div class="dropdown-content">
-      <a href="index2.jsp?comp=2">Premier League</a>
-      <a href="index2.jsp?comp=77">Championship</a>
-      <a href="index2.jsp?comp=82">League 1</a>
-      <a href="index2.jsp?comp=83">League 2</a>
-      <a href="index2.jsp?comp=154">National League</a>
-      <a href="index2.jsp?comp=155">National League North / South</a>
-      <a href="index2.jsp?comp=152">FA Cup</a>
-      <a href="index2.jsp?comp=149">Community Shield</a>
-      <a href="index2.jsp?comp=150">EFL Cup</a>
-      <a href="index2.jsp?comp=151">EFL Trophy</a>
-      <a href="index2.jsp?comp=153">FA Trophy</a>
+      <a href="homepage.jsp?comp=2">Premier League</a>
+      <a href="homepage.jsp?comp=77">Championship</a>
+      <a href="homepage.jsp?comp=82">League 1</a>
+      <a href="homepage.jsp?comp=83">League 2</a>
+      <a href="homepage.jsp?comp=154">National League</a>
+      <a href="homepage.jsp?comp=155">National League North / South</a>
+      <a href="homepage.jsp?comp=152">FA Cup</a>
+      <a href="homepage.jsp?comp=149">Community Shield</a>
+      <a href="homepage.jsp?comp=150">EFL Cup</a>
+      <a href="homepage.jsp?comp=151">EFL Trophy</a>
+      <a href="homepage.jsp?comp=153">FA Trophy</a>
     </div>
   </div> 
   <% } %>
